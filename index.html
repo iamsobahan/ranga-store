@@ -52,25 +52,22 @@
 
   <main class="main">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div id="DetailShow"></div>
+      <div class="search-field">
+        <div class="search-box">
+          <input id="input-field" class="search-field" type="text" placeholder="search your products" />
+
+          <button type="button" class="btn btn-warning search-button" data-toggle="button" aria-pressed="false"
+            autocomplete="off" id="search-btn" onclick="loadProducts()">
+            Search
+          </button>
+
         </div>
-        <div class="col-lg-5">
-          <div class="search-field">
-            <div class="search-box">
-              <input id="input-field" class="search-field" type="text" placeholder="search your products" />
-
-              <button type="button" class="btn btn-warning search-button" data-toggle="button" aria-pressed="false"
-                autocomplete="off" id="search-btn" onclick="loadProducts()">
-                Search
-              </button>
-
-            </div>
-          </div>
-        </div>
-
       </div>
+
+
+      <div id="DetailShow"></div>
+    </div>
+    </div>
 
 
 

@@ -14,11 +14,12 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
+    div.style.width = "340px";
     div.innerHTML = `<div class="single-product">
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h3>${product.title}</h3>
+      <h3>${product.title.slice(0,20)}</h3>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
       
@@ -33,32 +34,28 @@ const showProducts = (products) => {
 
 const modalDetails = (id) => {
   const DetailShow = document.getElementById('DetailShow')
-
   const url = `https://fakestoreapi.com/products/${id}`
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      DetailShow.innerText = ''
+      DetailShow.innerText = '';
+      DetailShow.style.border = "1px solid #0E2F44"
       let div = document.createElement('div');
       div.classList.add('d-flex')
       div.innerHTML = `
       <img class="detailImg" src=${data.image}></img>
       <div class="mLeft">
-      <h3>${data.title}</h3>
-      <h4>${data.description.slice(0,100)}</h4>
-      <p>${data.category}</p>
-      <p>$${data.price}</p>
-      
+      <h3>${data.title.slice(0,50)}.</h3>
+      <h4>${data.description.slice(0,200)}.</h4>
       </div>
       `
-
-
       DetailShow.appendChild(div)
     })
 
 }
 
 let count = 0;
+
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
