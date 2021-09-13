@@ -1,3 +1,4 @@
+// collecting data using  fetch
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
   fetch(url)
@@ -26,13 +27,15 @@ const showProducts = (products) => {
       <h3>${product.rating.rate}<small class="text-muted fs-5">/5</small></h3>
       <p>${product.rating.count} ratings </p>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger" onclick="modalDetails(${product.id})" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Details</button></div>
+      <button id="details-btn" class="btn btn-danger" onclick="renderDetails(${product.id})" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
 
-const modalDetails = (id) => {
+
+// click event  using arrow function of details button and showing in ui
+const renderDetails = (id) => {
   const DetailShow = document.getElementById('DetailShow')
   const url = `https://fakestoreapi.com/products/${id}`
   fetch(url)
@@ -55,19 +58,19 @@ const modalDetails = (id) => {
 }
 
 let count = 0;
-
+// add to cart click event function and adding product quentity tax and total
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
-
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
   updateTotal()
 };
 
+// get Id and return its innerText with parse Int
 const getInputValue = (id) => {
   const element = document.getElementById(id);
-  const converted = parseFloat(element.innerText);
+  const converted = parseInt(element.innerText);
   return converted;
 };
 

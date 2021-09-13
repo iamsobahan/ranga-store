@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FakeStore</title>
+  <!-- css link start -->
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- css link end -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
@@ -19,8 +21,7 @@
 
 <body>
 
-
-
+  <!-- header part start -->
   <header>
     <nav>
       <div class="container">
@@ -29,58 +30,54 @@
             <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo"></a>
           </div>
 
-
           <div class="col-lg-9">
             <ul class="navUl">
               <li><a href="#">Home</a></li>
               <li><a href="#">Features</a></li>
               <li><a href="#">Pricing</a></li>
-
             </ul>
           </div>
         </div>
-
-
-
-
-
       </div>
     </nav>
-
   </header>
 
+  <!-- header part end -->
 
+  <!-- main part start -->
   <main class="main">
     <div class="container">
+
+      <!-- search  field start -->
       <div class="search-field">
         <div class="search-box">
           <input id="input-field" class="search-field" type="text" placeholder="search your products" />
-
           <button type="button" class="btn btn-warning search-button" data-toggle="button" aria-pressed="false"
             autocomplete="off" id="search-btn" onclick="loadProducts()">
             Search
           </button>
-
         </div>
       </div>
-
-
-      <div id="DetailShow"></div>
     </div>
-    </div>
+    <!-- search  field end -->
+
+    <!-- after click details button more details of product shown here -->
+    <div id="DetailShow"></div>
 
 
 
 
-    </div>
 
     <div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
 
-        </div>
+      <!-- all products will be shown  into all-products id -->
+      <div class="col-md-9 col-lg-9 col-sm-8">
+
+        <div id="all-products" class=""></div>
       </div>
-      <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
+
+      <!-- cart related element  -->
+      <div class="col-md-3 col-lg-3 col-sm-4 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
             <thead>
@@ -131,9 +128,9 @@
       </div>
     </div>
   </main>
-  <footer>
 
-  </footer>
+  <!-- main part end -->
+  <footer></footer>
 
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>

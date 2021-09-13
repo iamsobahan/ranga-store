@@ -1,3 +1,9 @@
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* header css start */
 nav {
   padding: 20px 0;
 }
@@ -6,7 +12,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: end;
-
 
 }
 
@@ -34,13 +39,11 @@ nav {
   color: #EC971F;
 }
 
-
-
-
-
-body {
-  overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
+/* header css end */
+/* main part start */
+/* search and display detail of main part css start */
+.main {
+  margin-top: 30px;
 }
 
 .search-field {
@@ -52,10 +55,6 @@ body {
   width: 69%;
   margin: 0 auto;
 
-}
-
-.main {
-  margin-top: 30px;
 }
 
 .search-field:hover {
@@ -80,13 +79,16 @@ body {
 }
 
 #DetailShow {
-  width: 500px;
-  height: 200px;
+  width: 67%;
   margin: 20px auto;
+  margin-left: 60px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px 10px;
 }
 
+/* search and display detail of main part css end*/
+
+/* dom render items css start */
 .detailImg {
   width: 100px;
   height: 100px;
@@ -102,8 +104,9 @@ body {
   margin-left: 15px;
 }
 
+/* dom render items css end */
 
-
+/*  all products css start */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -138,12 +141,13 @@ body {
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
-  top: 30%;
+  top: 40%;
 
 }
 
+/*  all products css end */
 
-
+/* responsive css start  */
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -169,3 +173,5 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/* responsive css end  */
